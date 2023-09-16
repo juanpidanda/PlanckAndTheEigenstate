@@ -8,9 +8,9 @@ public class InputManager : MonoBehaviour
     [SerializeField] PlayerInput userInput;
 
     [Header("Gameplay Outputs; Outputs to read from other scripts")]
-    [SerializeField] float secondsToTurnOffOutputs = 0.35f;
+    [SerializeField] float secondsToTurnOffOutputs = 0.05f;
     [Header("Movemet Output")]
-    [SerializeField] internal int movementOutput;
+    [SerializeField] internal float movementOutput;
     [Header("Jump Output")]
     [SerializeField] internal bool jumpOutput;
     [Header("Primary Shot Outputs")]
@@ -29,7 +29,19 @@ public class InputManager : MonoBehaviour
     #region MOVEMENT FUNCTIONS
     public void OnMovement(InputAction.CallbackContext movementValue)
     {
-        movementOutput = (int)movementValue.ReadValue<Vector2>().normalized.x;
+        movementOutput = movementValue.ReadValue<Vector2>().x;
+        if (movementOutput > 0.1f)
+        {
+            movementOutput = 1;
+        }
+        else if (movementOutput < -0.1f)
+        {
+            movementOutput = -1;
+        }
+        else
+        {
+            movementOutput = 0;
+        }
         if (GameManager.gameManagerInstance.wantInputDebug)
         {
             Debug.Log("Movement Action Called = " + movementValue.ReadValue<Vector2>().x.ToString());

@@ -51,6 +51,7 @@ MonoBehaviour:
   wantGeneralDebug: 1
   wantInputDebug: 0
   wantSettingsDebug: 0
+  wantPlayerDebug: 0
   currentGameScene: 0
   currentSceneState: 0
   inputManager: {fileID: 7644742875940230103}
@@ -68,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInput: {fileID: 4359089572440677578}
-  secondsToTurnOffOutputs: 0.35
+  secondsToTurnOffOutputs: 0.05
   movementOutput: 0
   jumpOutput: 0
   primaryShotOutput: 0

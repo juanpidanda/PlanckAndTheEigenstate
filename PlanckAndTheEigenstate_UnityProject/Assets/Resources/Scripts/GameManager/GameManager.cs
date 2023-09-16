@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public bool wantGeneralDebug;
     public bool wantInputDebug;
     public bool wantSettingsDebug;
+    public bool wantPlayerDebug;
 
     [Header("Scene Data")]
     [SerializeField] GameScenes currentGameScene;
