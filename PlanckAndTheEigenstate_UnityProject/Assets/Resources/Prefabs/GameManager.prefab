@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wantGeneralDebug: 1
-  wantInputDebug: 0
+  wantInputDebug: 1
   wantSettingsDebug: 0
   wantPlayerDebug: 0
   currentGameScene: 0
@@ -76,6 +76,7 @@ MonoBehaviour:
   primaryShotVarOutput: 0
   secondaryShotOutput: 0
   secondaryShotVarOutput: 0
+  aimingOutput: {x: 0, y: 0, z: 0}
 --- !u!114 &4359089572440677578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +166,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d3f402a7-e304-4e15-98b4-e8de9b9bc8a4
     m_ActionName: CharacterActionMap/WaveShoot[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7644742875940230103}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnAiming
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1ad4bca4-01c3-4518-a315-fc928f4dc29c
+    m_ActionName: CharacterActionMap/Aiming[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharacterActionMap

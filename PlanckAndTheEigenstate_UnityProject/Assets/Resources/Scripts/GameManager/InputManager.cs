@@ -19,6 +19,8 @@ public class InputManager : MonoBehaviour
     [Header("Secondary Shot Outputs")]
     [SerializeField] internal bool secondaryShotOutput;
     [SerializeField] internal bool secondaryShotVarOutput;
+    [Header("Aiming Outputs")]
+    [SerializeField] internal Vector2 aimingOutput;
     private void Awake()
     {
         if(userInput == null)
@@ -169,5 +171,19 @@ public class InputManager : MonoBehaviour
                 break;
         }
     }
+    #endregion
+
+    #region AIMING FUNCTIONS
+
+    public void OnAiming(InputAction.CallbackContext aimingValue)
+    {
+        aimingOutput = aimingValue.ReadValue<Vector2>();
+
+        if (GameManager.gameManagerInstance.wantInputDebug)
+        {
+            Debug.Log("Aiming Action Called = " + aimingValue.ReadValue<Vector2>());
+        }
+    }
+
     #endregion
 }

@@ -66,7 +66,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Aiming"",
                     ""type"": ""Value"",
-                    ""id"": ""19784cba-81e9-4daf-87af-be8a6970ec6b"",
+                    ""id"": ""1ad4bca4-01c3-4518-a315-fc928f4dc29c"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -74,6 +74,17 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""0feb08e9-d2aa-4496-b7f6-b6709c45441a"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
                 {
                     ""name"": ""2DVector"",
                     ""id"": ""46c48ee6-67ca-4092-836f-a7e5e6b900e0"",
@@ -139,17 +150,6 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c9dc85f1-0122-4473-9645-a0037fd5083a"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -219,8 +219,8 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""30d24710-fe2f-426b-ac7a-38afd8546e8b"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""id"": ""745f0a11-9ac8-43d1-8f1b-900047eefbe6"",
+                    ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -230,8 +230,8 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""0745e9ef-045e-4f4f-9bc1-903ab8451152"",
-                    ""path"": ""<Mouse>/position"",
+                    ""id"": ""75eac31e-abaf-4998-8b79-e698c58b5dfd"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
