@@ -62,6 +62,15 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Aiming"",
+                    ""type"": ""Value"",
+                    ""id"": ""1ad4bca4-01c3-4518-a315-fc928f4dc29c"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -207,6 +216,28 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""WaveShot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""745f0a11-9ac8-43d1-8f1b-900047eefbe6"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aiming"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""75eac31e-abaf-4998-8b79-e698c58b5dfd"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aiming"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -219,6 +250,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
         m_CharacterActionMap_Jump = m_CharacterActionMap.FindAction("Jump", throwIfNotFound: true);
         m_CharacterActionMap_ParticleShot = m_CharacterActionMap.FindAction("ParticleShot", throwIfNotFound: true);
         m_CharacterActionMap_WaveShot = m_CharacterActionMap.FindAction("WaveShot", throwIfNotFound: true);
+        m_CharacterActionMap_Aiming = m_CharacterActionMap.FindAction("Aiming", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -284,6 +316,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_CharacterActionMap_Jump;
     private readonly InputAction m_CharacterActionMap_ParticleShot;
     private readonly InputAction m_CharacterActionMap_WaveShot;
+    private readonly InputAction m_CharacterActionMap_Aiming;
     public struct CharacterActionMapActions
     {
         private @UserInputActions m_Wrapper;
@@ -292,6 +325,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_CharacterActionMap_Jump;
         public InputAction @ParticleShot => m_Wrapper.m_CharacterActionMap_ParticleShot;
         public InputAction @WaveShot => m_Wrapper.m_CharacterActionMap_WaveShot;
+        public InputAction @Aiming => m_Wrapper.m_CharacterActionMap_Aiming;
         public InputActionMap Get() { return m_Wrapper.m_CharacterActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -313,6 +347,9 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
             @WaveShot.started += instance.OnWaveShot;
             @WaveShot.performed += instance.OnWaveShot;
             @WaveShot.canceled += instance.OnWaveShot;
+            @Aiming.started += instance.OnAiming;
+            @Aiming.performed += instance.OnAiming;
+            @Aiming.canceled += instance.OnAiming;
         }
 
         private void UnregisterCallbacks(ICharacterActionMapActions instance)
@@ -329,6 +366,9 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
             @WaveShot.started -= instance.OnWaveShot;
             @WaveShot.performed -= instance.OnWaveShot;
             @WaveShot.canceled -= instance.OnWaveShot;
+            @Aiming.started -= instance.OnAiming;
+            @Aiming.performed -= instance.OnAiming;
+            @Aiming.canceled -= instance.OnAiming;
         }
 
         public void RemoveCallbacks(ICharacterActionMapActions instance)
@@ -352,5 +392,6 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnParticleShot(InputAction.CallbackContext context);
         void OnWaveShot(InputAction.CallbackContext context);
+        void OnAiming(InputAction.CallbackContext context);
     }
 }
