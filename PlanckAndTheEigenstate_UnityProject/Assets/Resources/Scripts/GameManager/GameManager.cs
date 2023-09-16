@@ -33,9 +33,9 @@ public class GameManager : MonoBehaviour
     SceneState lastSceneState;
 
     [Header("Management")]
-    [SerializeField] InputManager inputManager;
-    //[SerializeField] AudioManager audioManager;
-    //[SerializeField] SettingsManager SettingsManager;
+    [SerializeField] internal InputManager inputManager;
+    //[SerializeField] internal AudioManager audioManager;
+    //[SerializeField] internal SettingsManager SettingsManager;
 
     void Awake()
     {
