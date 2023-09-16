@@ -7,15 +7,18 @@ public class InputManager : MonoBehaviour
     [Header("Input System")]
     [SerializeField] PlayerInput userInput;
 
-    [Tooltip("Outputs to read from other scripts")]
-    [Header("Gameplay Outputs")]
+    [Header("Gameplay Outputs; Outputs to read from other scripts")]
+    [SerializeField] float secondsToTurnOffOutputs = 0.35f;
+    [Header("Movemet Output")]
     [SerializeField] internal int movementOutput;
+    [Header("Jump Output")]
     [SerializeField] internal bool jumpOutput;
+    [Header("Primary Shot Outputs")]
     [SerializeField] internal bool primaryShotOutput;
     [SerializeField] internal bool primaryShotVarOutput;
+    [Header("Secondary Shot Outputs")]
     [SerializeField] internal bool secondaryShotOutput;
     [SerializeField] internal bool secondaryShotVarOutput;
-    [SerializeField] float secondsToTurnOffOutputs = 0.5f;
     private void Awake()
     {
         if(userInput == null)

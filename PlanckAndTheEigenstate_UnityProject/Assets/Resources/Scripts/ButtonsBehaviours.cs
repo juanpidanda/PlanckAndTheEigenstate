@@ -8,8 +8,12 @@ public class ButtonsBehaviours : MonoBehaviour
     {
         GameManager.gameManagerInstance.CallGameScene(level);
     }
-    public void CallPause(bool wantToPause)
+    public void PauseButton(bool wantToPause)
     {
         GameManager.gameManagerInstance.PauseApp(wantToPause);
+    }
+    public void QuitAppButton()
+    {
+        GameManager.gameManagerInstance.CallAppQuit();
     }
 }

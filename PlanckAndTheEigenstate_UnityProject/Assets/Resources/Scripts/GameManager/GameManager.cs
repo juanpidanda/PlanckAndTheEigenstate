@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Management")]
     [SerializeField] internal InputManager inputManager;
-    //[SerializeField] internal AudioManager audioManager;
+    [SerializeField] internal AudioManager audioManager;
     //[SerializeField] internal SettingsManager SettingsManager;
 
     void Awake()
@@ -71,12 +71,20 @@ public class GameManager : MonoBehaviour
         {
             inputManager = GetComponent<InputManager>();
         }
+        if(audioManager == null)
+        {
+            audioManager = GetComponent<AudioManager>();
+        }
 
         if (wantGeneralDebug)
         {
             if(inputManager == null)
             {
                 Debug.Log("Input manager is missing");
+            }
+            if(audioManager == null)
+            {
+                Debug.Log("Audio Manager is missing");
             }
         }
     }
@@ -99,16 +107,22 @@ public class GameManager : MonoBehaviour
         switch (currentGameScene)
         {
             case GameScenes.MAINMENU:
+                audioManager.SetNewTheme(audioManager.mainMenuClip);
                 break;
             case GameScenes.LEVEL_01:
+                audioManager.SetNewTheme(audioManager.level01Clip);
                 break;
             case GameScenes.LEVEL_02:
+                audioManager.SetNewTheme(audioManager.level02Clip);
                 break;
             case GameScenes.LEVEL_03:
+                audioManager.SetNewTheme(audioManager.level03Clip);
                 break;
             case GameScenes.LEVEL_04:
+                audioManager.SetNewTheme(audioManager.level04Clip);
                 break;
             case GameScenes.CINEMATICS:
+                audioManager.SetNewTheme(audioManager.mainMenuClip);
                 break;
         }
     }
