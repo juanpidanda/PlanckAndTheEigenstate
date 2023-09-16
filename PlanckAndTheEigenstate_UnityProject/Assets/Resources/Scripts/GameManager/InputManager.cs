@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] internal bool secondaryShotOutput;
     [SerializeField] internal bool secondaryShotVarOutput;
     [Header("Aiming Outputs")]
-    [SerializeField] internal Vector3 aimingOutput;
+    [SerializeField] internal Vector2 aimingOutput;
     private void Awake()
     {
         if(userInput == null)

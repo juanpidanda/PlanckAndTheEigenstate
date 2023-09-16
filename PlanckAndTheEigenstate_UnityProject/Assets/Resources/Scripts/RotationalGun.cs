@@ -14,17 +14,15 @@ public class RotationalGun : MonoBehaviour
 
     [Header("Gun Rotation Settings")]
     public GameObject gun_pivot;
-    public GameObject bulletParticle;
-    public GameObject bulletWave;
+    public GameObject bullet;
+    public Sprite particle, wave;
     [SerializeField] float mouseOffset;
 
     Vector2 difference;
     Vector2 mouseTargetPos;
-    Rigidbody2D bulletRb;
 
     void Start()
     {
-        bulletRb = bulletParticle.GetComponent<Rigidbody2D>();
         currentBulletTime = 0.0f;
     }
 
@@ -34,8 +32,8 @@ public class RotationalGun : MonoBehaviour
         FireGun();
         if(bulletWasFired == false)
         {
-            bulletParticle.transform.position = transform.position;
-            bulletRb.velocity = Vector2.zero;
+            bullet.transform.position = transform.position;
+            
         }
         else
         {
@@ -43,7 +41,7 @@ public class RotationalGun : MonoBehaviour
             currentBulletTime += Time.deltaTime;
         }
 
-        if (currentBulletTime > 5)
+        if (currentBulletTime > maxBulletTime)
         {
             currentBulletTime = 0;
             bulletWasFired = false;
@@ -61,14 +59,30 @@ public class RotationalGun : MonoBehaviour
     {
         if(GameManager.gameManagerInstance.inputManager.primaryShotOutput && bulletWasFired == false){
             bulletWasFired = true;
-            bulletParticle.transform.position = bulletStartingPoint.position;
+            bullet.transform.position = bulletStartingPoint.position;
             mouseTargetPos = difference;
+            bullet.tag = "Particle";
+            bullet.GetComponent<SpriteRenderer>().sprite = particle;
+        }
+
+        if (GameManager.gameManagerInstance.inputManager.secondaryShotOutput && bulletWasFired == true)
+        {
+            ChangeType();
         }
     }
 
     void MoveInDirection(Vector2 direction)
     {
         direction.Normalize();
-        bulletParticle.transform.Translate(direction * bulletSpeed * Time.deltaTime);
+        bullet.transform.Translate(direction * bulletSpeed * Time.deltaTime);
+    }
+
+    void ChangeType()
+    {
+        if(bullet.GetComponent<SpriteRenderer>() is var bulletSprite && bullet.tag == "Particle")
+        {
+            bulletSprite.sprite = wave;
+            bullet.tag = "Wave";
+        }
     }
 }
