@@ -40,20 +40,18 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Aiming",
+                    "type": "Value",
+                    "id": "19784cba-81e9-4daf-87af-be8a6970ec6b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "0feb08e9-d2aa-4496-b7f6-b6709c45441a",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "2DVector",
                     "id": "46c48ee6-67ca-4092-836f-a7e5e6b900e0",
@@ -122,6 +120,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c9dc85f1-0122-4473-9645-a0037fd5083a",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "2e7d49c0-87c1-438c-aea8-d167cbc75cd8",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -183,6 +192,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "WaveShot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "30d24710-fe2f-426b-ac7a-38afd8546e8b",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aiming",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0745e9ef-045e-4f4f-9bc1-903ab8451152",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aiming",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

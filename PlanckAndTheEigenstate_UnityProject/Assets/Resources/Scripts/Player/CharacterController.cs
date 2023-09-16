@@ -34,7 +34,6 @@ public class CharacterController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Floor") && collision.gameObject.transform.position.y < gameObject.transform.position.y)
         {
-            Debug.Log("Happened");
             jumpAvailable = true;
             //StopCoroutine(jumpCooldownCoroutine);
         }

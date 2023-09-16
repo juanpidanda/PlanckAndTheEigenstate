@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInput: {fileID: 4359089572440677578}
-  secondsToTurnOffOutputs: 0.05
+  secondsToTurnOffOutputs: 0.1
   movementOutput: 0
   jumpOutput: 0
   primaryShotOutput: 0
@@ -183,9 +183,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundtrackSource: {fileID: 78132993999813837}
-  mainMenuClip: {fileID: 8300000, guid: 882bcb4dc4ffc1d46add9c1632533c50, type: 3}
+  mainMenuClip: {fileID: 8300000, guid: 9da3f077a7a87f241a19b959a4df0d3e, type: 3}
   level01Clip: {fileID: 8300000, guid: 882bcb4dc4ffc1d46add9c1632533c50, type: 3}
-  level02Clip: {fileID: 8300000, guid: 882bcb4dc4ffc1d46add9c1632533c50, type: 3}
+  level02Clip: {fileID: 8300000, guid: 9da3f077a7a87f241a19b959a4df0d3e, type: 3}
   level03Clip: {fileID: 8300000, guid: 882bcb4dc4ffc1d46add9c1632533c50, type: 3}
   level04Clip: {fileID: 8300000, guid: 882bcb4dc4ffc1d46add9c1632533c50, type: 3}
 --- !u!82 &78132993999813837

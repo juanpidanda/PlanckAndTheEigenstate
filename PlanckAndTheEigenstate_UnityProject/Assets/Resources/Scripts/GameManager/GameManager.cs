@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
     }
     void CurrentSceneStartPhase()
     {
-        currentSceneState = SceneState.ENDING;
+        currentSceneState = SceneState.STARTING;
         switch (currentGameScene)
         {
             case GameScenes.MAINMENU:
@@ -126,6 +126,7 @@ public class GameManager : MonoBehaviour
                 audioManager.SetNewTheme(audioManager.mainMenuClip);
                 break;
         }
+        currentSceneState = SceneState.PLAYING;
     }
     void CurrentSceneEndPhase()
     {

@@ -62,20 +62,18 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Aiming"",
+                    ""type"": ""Value"",
+                    ""id"": ""19784cba-81e9-4daf-87af-be8a6970ec6b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""0feb08e9-d2aa-4496-b7f6-b6709c45441a"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": ""2DVector"",
                     ""id"": ""46c48ee6-67ca-4092-836f-a7e5e6b900e0"",
@@ -144,6 +142,17 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""c9dc85f1-0122-4473-9645-a0037fd5083a"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""2e7d49c0-87c1-438c-aea8-d167cbc75cd8"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
@@ -207,6 +216,28 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""WaveShot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""30d24710-fe2f-426b-ac7a-38afd8546e8b"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aiming"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0745e9ef-045e-4f4f-9bc1-903ab8451152"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aiming"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -219,6 +250,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
         m_CharacterActionMap_Jump = m_CharacterActionMap.FindAction("Jump", throwIfNotFound: true);
         m_CharacterActionMap_ParticleShot = m_CharacterActionMap.FindAction("ParticleShot", throwIfNotFound: true);
         m_CharacterActionMap_WaveShot = m_CharacterActionMap.FindAction("WaveShot", throwIfNotFound: true);
+        m_CharacterActionMap_Aiming = m_CharacterActionMap.FindAction("Aiming", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -284,6 +316,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_CharacterActionMap_Jump;
     private readonly InputAction m_CharacterActionMap_ParticleShot;
     private readonly InputAction m_CharacterActionMap_WaveShot;
+    private readonly InputAction m_CharacterActionMap_Aiming;
     public struct CharacterActionMapActions
     {
         private @UserInputActions m_Wrapper;
@@ -292,6 +325,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_CharacterActionMap_Jump;
         public InputAction @ParticleShot => m_Wrapper.m_CharacterActionMap_ParticleShot;
         public InputAction @WaveShot => m_Wrapper.m_CharacterActionMap_WaveShot;
+        public InputAction @Aiming => m_Wrapper.m_CharacterActionMap_Aiming;
         public InputActionMap Get() { return m_Wrapper.m_CharacterActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -313,6 +347,9 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
             @WaveShot.started += instance.OnWaveShot;
             @WaveShot.performed += instance.OnWaveShot;
             @WaveShot.canceled += instance.OnWaveShot;
+            @Aiming.started += instance.OnAiming;
+            @Aiming.performed += instance.OnAiming;
+            @Aiming.canceled += instance.OnAiming;
         }
 
         private void UnregisterCallbacks(ICharacterActionMapActions instance)
@@ -329,6 +366,9 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
             @WaveShot.started -= instance.OnWaveShot;
             @WaveShot.performed -= instance.OnWaveShot;
             @WaveShot.canceled -= instance.OnWaveShot;
+            @Aiming.started -= instance.OnAiming;
+            @Aiming.performed -= instance.OnAiming;
+            @Aiming.canceled -= instance.OnAiming;
         }
 
         public void RemoveCallbacks(ICharacterActionMapActions instance)
@@ -352,5 +392,6 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnParticleShot(InputAction.CallbackContext context);
         void OnWaveShot(InputAction.CallbackContext context);
+        void OnAiming(InputAction.CallbackContext context);
     }
 }
