@@ -46,7 +46,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ParticleShoot"",
+                    ""name"": ""ParticleShot"",
                     ""type"": ""Button"",
                     ""id"": ""5acc5c47-4323-4c81-bd83-ba90a2d49dca"",
                     ""expectedControlType"": ""Button"",
@@ -55,7 +55,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""WaveShoot"",
+                    ""name"": ""WaveShot"",
                     ""type"": ""Button"",
                     ""id"": ""d3f402a7-e304-4e15-98b4-e8de9b9bc8a4"",
                     ""expectedControlType"": ""Button"",
@@ -65,6 +65,17 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""0feb08e9-d2aa-4496-b7f6-b6709c45441a"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
                 {
                     ""name"": ""2DVector"",
                     ""id"": ""46c48ee6-67ca-4092-836f-a7e5e6b900e0"",
@@ -99,15 +110,37 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""0feb08e9-d2aa-4496-b7f6-b6709c45441a"",
-                    ""path"": ""<Gamepad>/leftStick"",
+                    ""name"": ""2D Vector"",
+                    ""id"": ""00f4700c-2b26-447e-9057-9544782c0dee"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""47bd8c57-a69e-4a34-b185-2647ce3799e5"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""38956670-4cc8-4cca-9c12-887153e75957"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -127,7 +160,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ParticleShoot"",
+                    ""action"": ""ParticleShot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -138,7 +171,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""WaveShoot"",
+                    ""action"": ""WaveShot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -151,8 +184,8 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
         m_CharacterActionMap = asset.FindActionMap("CharacterActionMap", throwIfNotFound: true);
         m_CharacterActionMap_Movement = m_CharacterActionMap.FindAction("Movement", throwIfNotFound: true);
         m_CharacterActionMap_Jump = m_CharacterActionMap.FindAction("Jump", throwIfNotFound: true);
-        m_CharacterActionMap_ParticleShoot = m_CharacterActionMap.FindAction("ParticleShoot", throwIfNotFound: true);
-        m_CharacterActionMap_WaveShoot = m_CharacterActionMap.FindAction("WaveShoot", throwIfNotFound: true);
+        m_CharacterActionMap_ParticleShot = m_CharacterActionMap.FindAction("ParticleShot", throwIfNotFound: true);
+        m_CharacterActionMap_WaveShot = m_CharacterActionMap.FindAction("WaveShot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -216,16 +249,16 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
     private List<ICharacterActionMapActions> m_CharacterActionMapActionsCallbackInterfaces = new List<ICharacterActionMapActions>();
     private readonly InputAction m_CharacterActionMap_Movement;
     private readonly InputAction m_CharacterActionMap_Jump;
-    private readonly InputAction m_CharacterActionMap_ParticleShoot;
-    private readonly InputAction m_CharacterActionMap_WaveShoot;
+    private readonly InputAction m_CharacterActionMap_ParticleShot;
+    private readonly InputAction m_CharacterActionMap_WaveShot;
     public struct CharacterActionMapActions
     {
         private @UserInputActions m_Wrapper;
         public CharacterActionMapActions(@UserInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_CharacterActionMap_Movement;
         public InputAction @Jump => m_Wrapper.m_CharacterActionMap_Jump;
-        public InputAction @ParticleShoot => m_Wrapper.m_CharacterActionMap_ParticleShoot;
-        public InputAction @WaveShoot => m_Wrapper.m_CharacterActionMap_WaveShoot;
+        public InputAction @ParticleShot => m_Wrapper.m_CharacterActionMap_ParticleShot;
+        public InputAction @WaveShot => m_Wrapper.m_CharacterActionMap_WaveShot;
         public InputActionMap Get() { return m_Wrapper.m_CharacterActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -241,12 +274,12 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
-            @ParticleShoot.started += instance.OnParticleShoot;
-            @ParticleShoot.performed += instance.OnParticleShoot;
-            @ParticleShoot.canceled += instance.OnParticleShoot;
-            @WaveShoot.started += instance.OnWaveShoot;
-            @WaveShoot.performed += instance.OnWaveShoot;
-            @WaveShoot.canceled += instance.OnWaveShoot;
+            @ParticleShot.started += instance.OnParticleShot;
+            @ParticleShot.performed += instance.OnParticleShot;
+            @ParticleShot.canceled += instance.OnParticleShot;
+            @WaveShot.started += instance.OnWaveShot;
+            @WaveShot.performed += instance.OnWaveShot;
+            @WaveShot.canceled += instance.OnWaveShot;
         }
 
         private void UnregisterCallbacks(ICharacterActionMapActions instance)
@@ -257,12 +290,12 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
-            @ParticleShoot.started -= instance.OnParticleShoot;
-            @ParticleShoot.performed -= instance.OnParticleShoot;
-            @ParticleShoot.canceled -= instance.OnParticleShoot;
-            @WaveShoot.started -= instance.OnWaveShoot;
-            @WaveShoot.performed -= instance.OnWaveShoot;
-            @WaveShoot.canceled -= instance.OnWaveShoot;
+            @ParticleShot.started -= instance.OnParticleShot;
+            @ParticleShot.performed -= instance.OnParticleShot;
+            @ParticleShot.canceled -= instance.OnParticleShot;
+            @WaveShot.started -= instance.OnWaveShot;
+            @WaveShot.performed -= instance.OnWaveShot;
+            @WaveShot.canceled -= instance.OnWaveShot;
         }
 
         public void RemoveCallbacks(ICharacterActionMapActions instance)
@@ -284,7 +317,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnParticleShoot(InputAction.CallbackContext context);
-        void OnWaveShoot(InputAction.CallbackContext context);
+        void OnParticleShot(InputAction.CallbackContext context);
+        void OnWaveShot(InputAction.CallbackContext context);
     }
 }

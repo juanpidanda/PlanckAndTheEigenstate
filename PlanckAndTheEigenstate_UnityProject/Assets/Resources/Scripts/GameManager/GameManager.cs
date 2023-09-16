@@ -42,16 +42,12 @@ public class GameManager : MonoBehaviour
         CheckGameManagerInstance();
         GetManagers();
     }
-    private void Start()
-    {
-        CurrentSceneStartPhase();
-    }
     /// <summary>
     /// Check if gameManagerInstance exists, if yes destroy this, if not create an instance
     /// </summary>
     void CheckGameManagerInstance()
     {
-        if(gameManagerInstance == null)
+        if (gameManagerInstance == null)
         {
             gameManagerInstance = this;
             DontDestroyOnLoad(gameObject);
@@ -60,6 +56,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    private void Start()
+    {
+        CurrentSceneStartPhase();
     }
 
     /// <summary>
@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
     {
         SetNextScene(gameSceneToCall);
     }
-    public void CallGameSceneByIndex(int sceneIndex)
+    public void CallGameScene(int sceneIndex)
     {
         switch (sceneIndex)
         {
@@ -164,6 +164,15 @@ public class GameManager : MonoBehaviour
                 break;
             case 1:
                 SetNextScene(GameScenes.LEVEL_01);
+                break;
+            case 2:
+                SetNextScene(GameScenes.LEVEL_02);
+                break;
+            case 3:
+                SetNextScene(GameScenes.LEVEL_03);
+                break;
+            case 4:
+                SetNextScene(GameScenes.LEVEL_04);
                 break;
         }
     }

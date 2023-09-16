@@ -23,14 +23,38 @@ public class InputManager : MonoBehaviour
             userInput = GetComponent<PlayerInput>();
         }
     }
-    public void OnMovement(InputAction.CallbackContext inputValue)
+    #region MOVEMENT FUNCTIONS
+    public void OnMovement(InputAction.CallbackContext movementValue)
     {
-        movementOutput = (int)inputValue.ReadValue<Vector2>().x;
+        movementOutput = (int)movementValue.ReadValue<Vector2>().normalized.x;
         if (GameManager.gameManagerInstance.wantInputDebug)
         {
-            Debug.Log("Movement Action Called = " + inputValue.ReadValue<Vector2>().x.ToString());
+            Debug.Log("Movement Action Called = " + movementValue.ReadValue<Vector2>().x.ToString());
         }
     }
+    #endregion
+
+    #region JUMP FUNCTIONS
+    public void OnJump(InputAction.CallbackContext jumpAction)
+    {
+        if (jumpAction.started)
+        {
+            StartCoroutine(JumpCoroutine());
+        }
+        if (GameManager.gameManagerInstance.wantInputDebug)
+        {
+            Debug.Log("Jump Action called");
+        }
+    }
+    private IEnumerator JumpCoroutine()
+    {
+        jumpOutput = true;
+        yield return new WaitForSeconds(secondsToTurnOffOutputs);
+        jumpOutput = false;
+    }
+    #endregion
+
+    #region PRIMARY SHOT FUNCTIONS
     public void OnPrimaryShot(InputAction.CallbackContext primaryShotAction)
     {
         StartCoroutine(PrimaryShotCoroutine(primaryShotAction.phase));
@@ -40,19 +64,19 @@ public class InputManager : MonoBehaviour
             switch (primaryShotAction.phase)
             {
                 case InputActionPhase.Disabled:
-                    Debug.Log("Primary Shoot Action Disabled");
+                    Debug.Log("Primary Shot Action Disabled");
                     break;
                 case InputActionPhase.Waiting:
-                    Debug.Log("Primary Shoot Action Waiting");
+                    Debug.Log("Primary Shot Action Waiting");
                     break;
                 case InputActionPhase.Started:
-                    Debug.Log("Primary Shoot Action Started");
+                    Debug.Log("Primary Shot Action Started");
                     break;
                 case InputActionPhase.Performed:
-                    Debug.Log("Primary Shoot Action Performed");
+                    Debug.Log("Primary Shot Action Performed");
                     break;
                 case InputActionPhase.Canceled:
-                    Debug.Log("Primary Shoot Action Canceled");
+                    Debug.Log("Primary Shot Action Canceled");
                     break;
             }
         }
@@ -79,4 +103,56 @@ public class InputManager : MonoBehaviour
                 break;
         }
     }
+    #endregion
+
+    #region SECONDARY SHOT FUNCTIONS
+    public void OnSecondaryShot(InputAction.CallbackContext secondaryShotAction)
+    {
+        StartCoroutine(SecondaryShotCoroutine(secondaryShotAction.phase));
+
+        if (GameManager.gameManagerInstance.wantInputDebug)
+        {
+            switch (secondaryShotAction.phase)
+            {
+                case InputActionPhase.Disabled:
+                    Debug.Log("Secondary Shot Action Disabled");
+                    break;
+                case InputActionPhase.Waiting:
+                    Debug.Log("Secondary Shot Action Waiting");
+                    break;
+                case InputActionPhase.Started:
+                    Debug.Log("Secondary Shot Action Started");
+                    break;
+                case InputActionPhase.Performed:
+                    Debug.Log("Secondary Shot Action Performed");
+                    break;
+                case InputActionPhase.Canceled:
+                    Debug.Log("Secondary Shot Action Canceled");
+                    break;
+            }
+        }
+    }
+    private IEnumerator SecondaryShotCoroutine(InputActionPhase inputActionPhase)
+    {
+        switch (inputActionPhase)
+        {
+            case InputActionPhase.Disabled:
+                break;
+            case InputActionPhase.Waiting:
+                break;
+            case InputActionPhase.Started:
+                secondaryShotOutput = true;
+                yield return new WaitForSeconds(secondsToTurnOffOutputs);
+                secondaryShotOutput = false;
+                break;
+            case InputActionPhase.Performed:
+                break;
+            case InputActionPhase.Canceled:
+                secondaryShotVarOutput = true;
+                yield return new WaitForSeconds(secondsToTurnOffOutputs);
+                secondaryShotVarOutput = false;
+                break;
+        }
+    }
+    #endregion
 }
