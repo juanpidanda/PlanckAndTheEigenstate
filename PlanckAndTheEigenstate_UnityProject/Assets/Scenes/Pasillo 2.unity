@@ -290,7 +290,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.7237873, y: 1.8178873}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -301,7 +301,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.4475746, y: 9.416143}
   m_EdgeRadius: 0
 --- !u!1 &65118149
 GameObject:
@@ -2094,6 +2094,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4641108701692512967, guid: d7553fb91b5c59f40a4a0d543d844bbe, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6101680706438754048, guid: d7553fb91b5c59f40a4a0d543d844bbe, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -2772,11 +2776,11 @@ PrefabInstance:
       objectReference: {fileID: 307017751}
     - target: {fileID: 3827460620425631311, guid: 0057031041a067348bc56d29e2e999e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.530689
+      value: -10.370533
       objectReference: {fileID: 0}
     - target: {fileID: 3827460620425631311, guid: 0057031041a067348bc56d29e2e999e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.883841
+      value: 3.5649335
       objectReference: {fileID: 0}
     - target: {fileID: 3827460620425631311, guid: 0057031041a067348bc56d29e2e999e8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2812,11 +2816,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4353339127991785342, guid: 0057031041a067348bc56d29e2e999e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.3424625
+      value: 0.010009766
       objectReference: {fileID: 0}
     - target: {fileID: 4353339127991785342, guid: 0057031041a067348bc56d29e2e999e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.38192058
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9047857478286321041, guid: 0057031041a067348bc56d29e2e999e8, type: 3}
       propertyPath: m_Name
@@ -9284,11 +9288,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2426974505160502568, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
       propertyPath: timeForNextDialogue
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2426974505160502568, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
       propertyPath: timeToWaitBeforeDialogue
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5089228312046356585, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
       propertyPath: m_Name
