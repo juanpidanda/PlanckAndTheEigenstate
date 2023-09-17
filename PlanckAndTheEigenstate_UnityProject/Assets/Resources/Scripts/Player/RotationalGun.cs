@@ -20,6 +20,9 @@ public class RotationalGun : MonoBehaviour
     public Sprite particle, wave;
     [SerializeField] float mouseOffset;
 
+    [Header("Dialogue Settings")]
+    public DialogueSystem dialogueSystem;
+
     Vector2 difference;
     Vector2 mouseTargetPos;
     public event Action OnFire;
