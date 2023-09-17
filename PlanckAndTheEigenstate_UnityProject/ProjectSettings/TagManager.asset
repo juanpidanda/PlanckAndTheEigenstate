@@ -8,6 +8,7 @@ TagManager:
   - Wave
   - Particle
   - Dialogue
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
