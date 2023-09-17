@@ -29,8 +29,8 @@ public class GameManager : MonoBehaviour
     public bool wantPlayerDebug;
 
     [Header("Scene Data")]
-    [SerializeField] GameScenes currentGameScene;
-    [SerializeField] SceneState currentSceneState;
+    [SerializeField] internal GameScenes currentGameScene;
+    [SerializeField] internal SceneState currentSceneState;
     SceneState lastSceneState;
 
     [Header("Management")]
@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     {
         CheckGameManagerInstance();
         GetManagers();
+        CurrentSceneStartPhase();
     }
     /// <summary>
     /// Check if gameManagerInstance exists, if yes destroy this, if not create an instance
@@ -57,10 +58,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    private void Start()
-    {
-        CurrentSceneStartPhase();
     }
 
     /// <summary>
@@ -100,7 +97,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Loading " + sceneToSet.ToString() + " Scene");
         }
         SceneManager.LoadScene((int)sceneToSet);
-        //CurrentSceneStartPhase();
+        CurrentSceneStartPhase();
     }
     void CurrentSceneStartPhase()
     {
@@ -108,24 +105,19 @@ public class GameManager : MonoBehaviour
         switch (currentGameScene)
         {
             case GameScenes.MAINMENU:
-                audioManager.SetNewTheme(audioManager.mainMenuClip);
                 break;
             case GameScenes.LEVEL_01:
-                audioManager.SetNewTheme(audioManager.level01Clip);
                 break;
             case GameScenes.LEVEL_02:
-                audioManager.SetNewTheme(audioManager.level02Clip);
                 break;
             case GameScenes.LEVEL_03:
-                audioManager.SetNewTheme(audioManager.level03Clip);
                 break;
             case GameScenes.LEVEL_04:
-                audioManager.SetNewTheme(audioManager.level04Clip);
                 break;
             case GameScenes.CINEMATICS:
-                audioManager.SetNewTheme(audioManager.mainMenuClip);
                 break;
         }
+        audioManager.SetSceneTheme();
         currentSceneState = SceneState.PLAYING;
     }
     void CurrentSceneEndPhase()

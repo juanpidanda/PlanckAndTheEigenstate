@@ -43,7 +43,10 @@ public class CharacterController : MonoBehaviour
     {
         Vector2 movement = movementSpeed * direction * Vector2.right;
         characterRigidbody.AddForce(movement, movementForceMode);
-        Debug.Log("Magnitude: " + characterRigidbody.velocity.magnitude.ToString());
+        if (GameManager.gameManagerInstance.wantPlayerDebug)
+        {
+            Debug.Log("Magnitude: " + characterRigidbody.velocity.magnitude.ToString());
+        }
         characterRigidbody.velocity = truncate(characterRigidbody.velocity, maxMovementSpeed);
     }
     void Jump()
