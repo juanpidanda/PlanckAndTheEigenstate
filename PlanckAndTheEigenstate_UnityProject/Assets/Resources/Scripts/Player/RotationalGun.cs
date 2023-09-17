@@ -33,6 +33,7 @@ public class RotationalGun : MonoBehaviour
         currentBulletTime = 0.0f;
         OnAmmoRestored += () => bullet.transform.localScale = new Vector3(1, 1, 1);
         OnAmmoRestored += () => bullet.SetActive(false);
+        
     }
 
     void Update()
@@ -88,6 +89,8 @@ public class RotationalGun : MonoBehaviour
     {
         direction.Normalize();
         bullet.transform.Translate(direction * bulletSpeed * Time.deltaTime);
+        //float rotation_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //bullet.transform.rotation = Quaternion.Euler(0f, 0f, rotation_z);
     }
 
     void ChangeType()
@@ -97,6 +100,7 @@ public class RotationalGun : MonoBehaviour
             bulletSprite.sprite = wave;
             bullet.tag = "Wave";
             bullet.transform.localScale *= 2.0f;
+
         }
     }
 

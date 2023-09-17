@@ -16,6 +16,7 @@ public class DialogueSystem : MonoBehaviour
     private void Start()
     {
         isAvailable = true;
+        text.text = "";
     }
 
     public void DisplayDialogues(string[] newDialogues)
