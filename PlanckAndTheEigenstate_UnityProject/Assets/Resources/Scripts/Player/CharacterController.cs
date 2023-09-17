@@ -15,8 +15,12 @@ public class CharacterController : MonoBehaviour
     public float jumpForce;
     public ForceMode2D jumpingForceMode;
     private Coroutine jumpCooldownCoroutine;
+    private Animator animator;
+    private bool istrue;
+    private bool isJumping;
     private void Awake()
     {
+        isJumping = false;
         jumpAvailable = true;
         if(characterRigidbody == null)
         {
@@ -29,13 +33,25 @@ public class CharacterController : MonoBehaviour
         if (GameManager.gameManagerInstance.inputManager.jumpOutput)
         {
             Jump();
+            
         }
+        if (istrue == false)
+        {
+            animator.SetBool("running", false);
+
+        }
+    }
+    private void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Floor") && collision.gameObject.transform.position.y < gameObject.transform.position.y)
         {
             jumpAvailable = true;
+            animator.SetBool("isJumping", false);
+            isJumping=false;
             //StopCoroutine(jumpCooldownCoroutine);
         }
         if (collision.gameObject.tag == "Plataform/Mobile")
@@ -45,13 +61,27 @@ public class CharacterController : MonoBehaviour
     }
     void Movement(float direction)
     {
+        istrue = true;
         Vector2 movement = movementSpeed * direction * Vector2.right;
         characterRigidbody.AddForce(movement, movementForceMode);
+        if(direction ==0)
+            istrue = false;
+        if (istrue)
+        {
+            animator.SetBool("running", true);
+        }
         if (GameManager.gameManagerInstance.wantPlayerDebug)
         {
             Debug.Log("Magnitude: " + characterRigidbody.velocity.magnitude.ToString());
         }
         characterRigidbody.velocity = truncate(characterRigidbody.velocity, maxMovementSpeed);
+        if(direction <0) 
+        {
+            transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+            transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
+
     }
     void Jump()
     {
@@ -60,7 +90,11 @@ public class CharacterController : MonoBehaviour
             jumpAvailable = false;
             characterRigidbody.AddForce(jumpForce * Vector2.up, jumpingForceMode);
             //jumpCooldownCoroutine = StartCoroutine(JumpCooldownCoroutine());
+            animator.SetBool("isJumping", true);
+            isJumping = true;
         }
+            
+
     }
     //IEnumerator JumpCooldownCoroutine()
     //{

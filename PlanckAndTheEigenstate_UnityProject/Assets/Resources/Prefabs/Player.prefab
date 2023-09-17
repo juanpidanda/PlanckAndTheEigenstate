@@ -408,6 +408,7 @@ GameObject:
   - component: {fileID: 2533016792906926763}
   - component: {fileID: 3226925409099440002}
   - component: {fileID: 354642143231799172}
+  - component: {fileID: 7163273302375495323}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -534,3 +535,17 @@ MonoBehaviour:
   particle: {fileID: 21300000, guid: 582c633f776fc004081f5b0805f1e8f0, type: 3}
   wave: {fileID: 21300000, guid: 7e6f9db87d50fea4f91517e8bcf976b6, type: 3}
   mouseOffset: 0
+  dialogueSystem: {fileID: 0}
+--- !u!114 &7163273302375495323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8681000312166592758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0625f53bf99af2d4eb49f63da10efc96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saving: {fileID: 11400000, guid: 58acda3c3c190624798c58b88eb45984, type: 2}

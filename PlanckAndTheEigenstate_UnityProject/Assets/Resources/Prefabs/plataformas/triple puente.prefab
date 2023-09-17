@@ -1,0 +1,222 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7338755918029689450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6931886029422871009}
+  m_Layer: 0
+  m_Name: triple puente
+  m_TagString: Floor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6931886029422871009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7338755918029689450}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.12, y: 35.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5324508560455161461}
+  - {fileID: 5657647624662219669}
+  - {fileID: 5315475101638448341}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1899155067890212134
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6931886029422871009}
+    m_Modifications:
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06999779
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999771
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084048471566844275, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_Name
+      value: Puente particulas vers1 (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+--- !u!4 &5657647624662219669 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+  m_PrefabInstance: {fileID: 1899155067890212134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2097405857854632550
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6931886029422871009}
+    m_Modifications:
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.210001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999771
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084048471566844275, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_Name
+      value: Puente particulas vers1 (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+--- !u!4 &5315475101638448341 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+  m_PrefabInstance: {fileID: 2097405857854632550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2106369204295610566
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6931886029422871009}
+    m_Modifications:
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3499966
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14999771
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084048471566844275, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+      propertyPath: m_Name
+      value: Puente particulas vers1 (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+--- !u!4 &5324508560455161461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6115650743063570099, guid: fe436d1d152fda64687723e72a0c70d0, type: 3}
+  m_PrefabInstance: {fileID: 2106369204295610566}
+  m_PrefabAsset: {fileID: 0}
