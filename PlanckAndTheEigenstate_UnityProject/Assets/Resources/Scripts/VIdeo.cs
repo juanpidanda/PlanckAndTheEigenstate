@@ -17,7 +17,7 @@ public class VIdeo : MonoBehaviour
     void Update()
     {
         currentTime += Time.deltaTime;
-        Debug.Log(currentTime);
+        //Debug.Log(currentTime);
         if (currentTime >= timeVideo)
         {
             Application.LoadLevel("MainMenu");
