@@ -7,8 +7,8 @@ TagManager:
   - Floor
   - Wave
   - Particle
-  - UI/Menus/Pause
-  - Platform/Mobile
+  - Dialogue
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
