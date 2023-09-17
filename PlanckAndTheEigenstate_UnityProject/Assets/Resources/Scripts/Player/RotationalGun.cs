@@ -33,6 +33,7 @@ public class RotationalGun : MonoBehaviour
         currentBulletTime = 0.0f;
         OnAmmoRestored += () => bullet.transform.localScale = new Vector3(1, 1, 1);
         OnAmmoRestored += () => bullet.SetActive(false);
+        
     }
 
     void Update()
