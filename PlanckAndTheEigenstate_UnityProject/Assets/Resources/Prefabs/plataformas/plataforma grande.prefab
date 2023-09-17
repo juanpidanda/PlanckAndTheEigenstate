@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_izq_256
       objectReference: {fileID: 0}
+    - target: {fileID: 6503692918082570713, guid: a28ee96acf59e924ab3e385307283fd1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 445b088533147a745af77e848ae551e4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -398,6 +402,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3413788787988748448, guid: d430e69fe4f6325408633ffe18ceaacf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 532f41fc22aa0c6488b32ec322404bb9, type: 3}
     - target: {fileID: 5080709633185658145, guid: d430e69fe4f6325408633ffe18ceaacf, type: 3}
       propertyPath: m_Name
       value: P_der_256
