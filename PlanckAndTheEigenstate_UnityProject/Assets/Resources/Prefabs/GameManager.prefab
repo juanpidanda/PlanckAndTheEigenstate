@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wantGeneralDebug: 1
-  wantInputDebug: 1
+  wantInputDebug: 0
   wantSettingsDebug: 0
   wantPlayerDebug: 0
   currentGameScene: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   primaryShotVarOutput: 0
   secondaryShotOutput: 0
   secondaryShotVarOutput: 0
-  aimingOutput: {x: 0, y: 0, z: 0}
+  aimingOutput: {x: 0, y: 0}
 --- !u!114 &4359089572440677578
 MonoBehaviour:
   m_ObjectHideFlags: 0
