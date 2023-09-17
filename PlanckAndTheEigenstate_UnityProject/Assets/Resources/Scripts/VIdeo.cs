@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class VIdeo : MonoBehaviour
 {
-    private float timeVideo;
+    [SerializeField]private float timeVideo;
     private float currentTime;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        timeVideo = 26.0f;
-    }
+
 
     // Update is called once per frame
     void Update()
