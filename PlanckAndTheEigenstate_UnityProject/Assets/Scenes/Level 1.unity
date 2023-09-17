@@ -7401,6 +7401,96 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &304767427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.data[0]
+      value: 'This is too high! Could I reach higher using the light from by backpack? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.data[1]
+      value: ' I should try using the light from my backpack, maybe hit space again
+        while mid air.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.data[2]
+      value: Maybe I should hit it with the light particle from my flashlight.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 36.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 31.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Size.x
+      value: 6.217717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Size.y
+      value: 4.0155125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Offset.x
+      value: -4.000376
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.2752752
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152384897595776283, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Name
+      value: DialogueGiver_RocketJump
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
 --- !u!1 &306264828
 GameObject:
   m_ObjectHideFlags: 0
@@ -15703,6 +15793,96 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42a9f0e30ac65314a92a8172a8fdc2ea, type: 3}
+--- !u!1001 &661316963
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.data[0]
+      value: This place is so scary, I gotta put it together and keep going. I cant
+        reach the other side
+      objectReference: {fileID: 0}
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.data[1]
+      value: hey that looks like a light particle!
+      objectReference: {fileID: 0}
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.data[2]
+      value: Maybe I should hit it with the light particle from my flashlight.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Size.x
+      value: 6.217717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Size.y
+      value: 6.716568
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Offset.x
+      value: -4.000376
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.07525253
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152384897595776283, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Name
+      value: DialogueGiver
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
 --- !u!4 &662398644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5373621087610000397, guid: b70a636309ae80d43b69e0a25e920ab9, type: 3}
@@ -44846,6 +45026,97 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1870675013
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.data[0]
+      value: 'That is definetly too high. I should try something different, maybe
+        hitting the light particle with the right click will help. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.data[1]
+      value: ' I should try using the light from my backpack, maybe hit space again
+        while mid air.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 755282470234893916, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: dialogues.Array.data[2]
+      value: Maybe I should hit it with the light particle from my flashlight.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 82.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196123207252173478, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Size.x
+      value: 6.217717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Size.y
+      value: 7.8130016
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Offset.x
+      value: -4.000376
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629073773028851787, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.1740198
+      objectReference: {fileID: 0}
+    - target: {fileID: 4152384897595776283, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
+      propertyPath: m_Name
+      value: DialogueGiver_Trampolin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4edded6eb463264ca115bdd6e695265, type: 3}
 --- !u!1001 &1879627830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50608,6 +50879,99 @@ Transform:
   - {fileID: 1176670003}
   m_Father: {fileID: 243003222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2059851108
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 164243150779968267, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_text
+      value: This place is so scary, I gotta put it together and keep going. I cant
+        reach the other side
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426974505160502568, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: timeForNextDialogue
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426974505160502568, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: timeToWaitBeforeDialogue
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089228312046356585, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_Name
+      value: DialogueSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077594938281607341, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 712.6268
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077594938281607341, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 79.51221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077594938281607341, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -366
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215607056147521482, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.229983
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215607056147521482, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4368793
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215607056147521482, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.956351
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215607056147521482, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215607056147521482, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215607056147521482, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215607056147521482, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215607056147521482, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215607056147521482, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215607056147521482, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+--- !u!114 &2059851109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2426974505160502568, guid: a5db7c3a53b2745408beff8ed62a1d75, type: 3}
+  m_PrefabInstance: {fileID: 2059851108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a228cf322f167a4d9be34e35043cd7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2071046012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50616,6 +50980,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 354642143231799172, guid: 0b586a6f8774eb0468f2095111e999a0, type: 3}
+      propertyPath: dialogueSystem
+      value: 
+      objectReference: {fileID: 2059851109}
     - target: {fileID: 1528719659357384236, guid: 0b586a6f8774eb0468f2095111e999a0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -52556,3 +52924,7 @@ SceneRoots:
   - {fileID: 2024007273}
   - {fileID: 1358444910}
   - {fileID: 5789512986778169492}
+  - {fileID: 2059851108}
+  - {fileID: 661316963}
+  - {fileID: 304767427}
+  - {fileID: 1870675013}
