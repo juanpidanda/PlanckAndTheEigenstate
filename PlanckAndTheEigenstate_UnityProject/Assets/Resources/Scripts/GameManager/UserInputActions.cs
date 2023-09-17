@@ -71,6 +71,15 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""3770378e-afc5-4f43-b6a3-209071647f35"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -238,6 +247,28 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Aiming"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1943690b-2368-481f-a682-0d5d0963e421"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""25364ff4-13e4-4076-9ed3-2ebd0f183b30"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -251,6 +282,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
         m_CharacterActionMap_ParticleShot = m_CharacterActionMap.FindAction("ParticleShot", throwIfNotFound: true);
         m_CharacterActionMap_WaveShot = m_CharacterActionMap.FindAction("WaveShot", throwIfNotFound: true);
         m_CharacterActionMap_Aiming = m_CharacterActionMap.FindAction("Aiming", throwIfNotFound: true);
+        m_CharacterActionMap_Pause = m_CharacterActionMap.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -317,6 +349,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_CharacterActionMap_ParticleShot;
     private readonly InputAction m_CharacterActionMap_WaveShot;
     private readonly InputAction m_CharacterActionMap_Aiming;
+    private readonly InputAction m_CharacterActionMap_Pause;
     public struct CharacterActionMapActions
     {
         private @UserInputActions m_Wrapper;
@@ -326,6 +359,7 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
         public InputAction @ParticleShot => m_Wrapper.m_CharacterActionMap_ParticleShot;
         public InputAction @WaveShot => m_Wrapper.m_CharacterActionMap_WaveShot;
         public InputAction @Aiming => m_Wrapper.m_CharacterActionMap_Aiming;
+        public InputAction @Pause => m_Wrapper.m_CharacterActionMap_Pause;
         public InputActionMap Get() { return m_Wrapper.m_CharacterActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -350,6 +384,9 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
             @Aiming.started += instance.OnAiming;
             @Aiming.performed += instance.OnAiming;
             @Aiming.canceled += instance.OnAiming;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(ICharacterActionMapActions instance)
@@ -369,6 +406,9 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
             @Aiming.started -= instance.OnAiming;
             @Aiming.performed -= instance.OnAiming;
             @Aiming.canceled -= instance.OnAiming;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(ICharacterActionMapActions instance)
@@ -393,5 +433,6 @@ public partial class @UserInputActions: IInputActionCollection2, IDisposable
         void OnParticleShot(InputAction.CallbackContext context);
         void OnWaveShot(InputAction.CallbackContext context);
         void OnAiming(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
