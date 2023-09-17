@@ -5679,29 +5679,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 354642143231799172, guid: 0b586a6f8774eb0468f2095111e999a0, type: 3}
       propertyPath: dialogueSystem
       value: 
       objectReference: {fileID: 253316918}
-=======
-    - target: {fileID: 2533016792906926763, guid: 0b586a6f8774eb0468f2095111e999a0, type: 3}
-      propertyPath: m_Mass
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533016792906926763, guid: 0b586a6f8774eb0468f2095111e999a0, type: 3}
-      propertyPath: m_LinearDrag
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533016792906926763, guid: 0b586a6f8774eb0468f2095111e999a0, type: 3}
-      propertyPath: m_GravityScale
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2542589264155650793, guid: 0b586a6f8774eb0468f2095111e999a0, type: 3}
-      propertyPath: jumpForce
-      value: 40
-      objectReference: {fileID: 0}
->>>>>>> Stashed changes
     - target: {fileID: 3909842028805314469, guid: 0b586a6f8774eb0468f2095111e999a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.65
