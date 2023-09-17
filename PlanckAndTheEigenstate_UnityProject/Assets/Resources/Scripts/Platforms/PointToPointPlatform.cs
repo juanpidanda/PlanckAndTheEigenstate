@@ -42,5 +42,6 @@ public class PointToPointPlatform : MonoBehaviour
         }
         currentCheckpointToGo = checkpoints[currentCheckpointID]; 
         direction = currentCheckpointToGo.position - platform.transform.position;
+        direction.Normalize();
     }
 }

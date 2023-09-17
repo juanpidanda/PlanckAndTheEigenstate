@@ -31,6 +31,8 @@ public class RotationalGun : MonoBehaviour
     void Start()
     {
         currentBulletTime = 0.0f;
+        OnAmmoRestored += () => bullet.transform.localScale = new Vector3(1, 1, 1);
+        OnAmmoRestored += () => bullet.SetActive(false);
     }
 
     void Update()
@@ -39,11 +41,13 @@ public class RotationalGun : MonoBehaviour
         FireGun();
         if(bulletWasFired == false)
         {
-            bullet.transform.position = transform.position;
             
+            bullet.transform.position = transform.position;
+
         }
         else
         {
+            bullet.SetActive(true);
             MoveInDirection(mouseTargetPos);
             currentBulletTime += Time.deltaTime;
         }
@@ -92,6 +96,7 @@ public class RotationalGun : MonoBehaviour
         {
             bulletSprite.sprite = wave;
             bullet.tag = "Wave";
+            bullet.transform.localScale *= 2.0f;
         }
     }
 

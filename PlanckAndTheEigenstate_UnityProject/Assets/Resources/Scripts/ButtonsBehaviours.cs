@@ -16,4 +16,9 @@ public class ButtonsBehaviours : MonoBehaviour
     {
         GameManager.gameManagerInstance.CallAppQuit();
     }
+    public void MainMenuButton()
+    {
+        GameManager.gameManagerInstance.CallGameScene(GameScenes.MAINMENU);
+    }
+    
 }
