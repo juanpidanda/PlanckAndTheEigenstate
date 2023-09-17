@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8021881649877681088}
+  - component: {fileID: 8707858036435083403}
   m_Layer: 0
   m_Name: triple plataforma
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -34,6 +35,33 @@ Transform:
   - {fileID: 7288306905734014565}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &8707858036435083403
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9049409490346118240}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 4029b9255a1e6c947adf7789028024ac, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1973613098599177059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,6 +114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_izq_256
       objectReference: {fileID: 0}
+    - target: {fileID: 6503692918082570713, guid: a28ee96acf59e924ab3e385307283fd1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 445b088533147a745af77e848ae551e4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -206,6 +238,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3413788787988748448, guid: d430e69fe4f6325408633ffe18ceaacf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 532f41fc22aa0c6488b32ec322404bb9, type: 3}
     - target: {fileID: 5080709633185658145, guid: d430e69fe4f6325408633ffe18ceaacf, type: 3}
       propertyPath: m_Name
       value: P_der_256
