@@ -8,6 +8,7 @@ public class CharacterController : MonoBehaviour
     [Header("Movement")]
     public float movementSpeed;
     public ForceMode2D movementForceMode;
+    public float maxMovementSpeed;
     [Header("Jumping")]
     [SerializeField]bool jumpAvailable;
     //public float jumpCooldown;
@@ -40,7 +41,10 @@ public class CharacterController : MonoBehaviour
     }
     void Movement(float direction)
     {
-        characterRigidbody.AddForce(movementSpeed * direction * Vector2.right, movementForceMode);
+        Vector2 movement = movementSpeed * direction * Vector2.right;
+        characterRigidbody.AddForce(movement, movementForceMode);
+        Debug.Log("Magnitude: " + characterRigidbody.velocity.magnitude.ToString());
+        characterRigidbody.velocity = truncate(characterRigidbody.velocity, maxMovementSpeed);
     }
     void Jump()
     {
@@ -66,5 +70,16 @@ public class CharacterController : MonoBehaviour
     //    jumpAvailable = true;
 
     //}
-    
+    private static Vector3 truncate(Vector3 vector, float maxValue)
+    {
+        //Condicional Sentinela
+        if (vector.magnitude <= maxValue)
+        {
+            return vector;
+        }
+
+        vector.Normalize();
+        return vector *= maxValue;
+    }
+
 }

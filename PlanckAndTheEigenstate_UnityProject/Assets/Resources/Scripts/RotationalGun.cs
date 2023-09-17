@@ -9,6 +9,7 @@ public class RotationalGun : MonoBehaviour
     public Transform bulletStartingPoint;
     [SerializeField] float maxBulletTime;
     [SerializeField] float bulletSpeed;
+    [SerializeField] float bulletPullForce;
     float currentBulletTime;
     bool bulletWasFired = false;
 
@@ -84,5 +85,17 @@ public class RotationalGun : MonoBehaviour
             bulletSprite.sprite = wave;
             bullet.tag = "Wave";
         }
+    }
+
+    private static Vector3 truncate(Vector3 vector, float maxValue)
+    {
+        //Condicional Sentinela
+        if (vector.magnitude <= maxValue)
+        {
+            return vector;
+        }
+
+        vector.Normalize();
+        return vector *= maxValue;
     }
 }
