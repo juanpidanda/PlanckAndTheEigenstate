@@ -341,13 +341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b596e0a201c984a86a8b3a0a8c1740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   timeVideo: 26
-=======
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 458916847}
   - {fileID: 1371001291}
->>>>>>> Stashed changes
