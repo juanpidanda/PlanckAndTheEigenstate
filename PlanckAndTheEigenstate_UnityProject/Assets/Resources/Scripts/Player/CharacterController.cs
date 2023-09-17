@@ -38,6 +38,10 @@ public class CharacterController : MonoBehaviour
             jumpAvailable = true;
             //StopCoroutine(jumpCooldownCoroutine);
         }
+        if (collision.gameObject.tag == "Plataform/Mobile")
+        {
+            transform.parent = collision.transform;
+        }
     }
     void Movement(float direction)
     {
@@ -84,5 +88,4 @@ public class CharacterController : MonoBehaviour
         vector.Normalize();
         return vector *= maxValue;
     }
-
 }

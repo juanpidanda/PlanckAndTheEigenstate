@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region PUBLIC CALLS
-    public void PauseApp(bool ispausing)
+    public void PauseApp(bool ispausing = true)
     {
         if (ispausing)
         {
@@ -151,6 +151,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            
             Time.timeScale = 1.0f;
             currentSceneState = lastSceneState;
         }

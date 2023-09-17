@@ -28,6 +28,26 @@ public class InputManager : MonoBehaviour
             userInput = GetComponent<PlayerInput>();
         }
     }
+    public void OnPause(InputAction.CallbackContext pauseAction)
+    {
+        //if (pauseAction.started)
+        //{
+        //    if (GameManager.gameManagerInstance.currentGameScene != GameScenes.MAINMENU)
+        //    {
+        //        GameObject pauseMenu = GameObject.Find("PauseMenu");
+        //        if(pauseMenu == null)
+        //        {
+        //            Debug.LogError("Pause Menu not found");
+        //        }
+        //        else
+        //        {
+        //            pauseMenu.SetActive(true);
+        //            GameManager.gameManagerInstance.PauseApp();
+        //        }
+        //    }
+
+        //}
+    }
     #region MOVEMENT FUNCTIONS
     public void OnMovement(InputAction.CallbackContext movementValue)
     {

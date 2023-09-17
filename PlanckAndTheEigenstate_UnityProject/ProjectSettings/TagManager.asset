@@ -7,6 +7,8 @@ TagManager:
   - Floor
   - Wave
   - Particle
+  - UI/Menus/Pause
+  - Platform/Mobile
   layers:
   - Default
   - TransparentFX
