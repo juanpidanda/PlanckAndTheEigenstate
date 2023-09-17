@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,8 @@ public class RotationalGun : MonoBehaviour
 
     Vector2 difference;
     Vector2 mouseTargetPos;
+    public event Action OnFire;
+    public event Action OnAmmoRestored;
 
     void Start()
     {
@@ -46,6 +49,7 @@ public class RotationalGun : MonoBehaviour
         {
             currentBulletTime = 0;
             bulletWasFired = false;
+            OnAmmoRestored?.Invoke();
         }
     }
 
@@ -64,6 +68,7 @@ public class RotationalGun : MonoBehaviour
             mouseTargetPos = difference;
             bullet.tag = "Particle";
             bullet.GetComponent<SpriteRenderer>().sprite = particle;
+            OnFire?.Invoke();
         }
 
         if (GameManager.gameManagerInstance.inputManager.secondaryShotOutput && bulletWasFired == true)
