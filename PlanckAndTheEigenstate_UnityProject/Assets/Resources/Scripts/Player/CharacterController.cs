@@ -52,7 +52,7 @@ public class CharacterController : MonoBehaviour
             jumpAvailable = true;
             animator.SetBool("isJumping", false);
             isJumping=false;
-            StopCoroutine(jumpCooldownCoroutine);
+            //StopCoroutine(jumpCooldownCoroutine);
         }
         if (collision.gameObject.tag == "Plataform/Mobile")
         {
