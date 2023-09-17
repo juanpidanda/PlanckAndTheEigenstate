@@ -50634,7 +50634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2542589264155650793, guid: 0b586a6f8774eb0468f2095111e999a0, type: 3}
       propertyPath: jumpForce
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3226925409099440002, guid: 0b586a6f8774eb0468f2095111e999a0, type: 3}
       propertyPath: m_Size.x

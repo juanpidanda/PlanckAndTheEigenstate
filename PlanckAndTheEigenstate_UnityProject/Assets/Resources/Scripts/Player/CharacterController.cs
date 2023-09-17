@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour
     public float maxMovementSpeed;
     [Header("Jumping")]
     [SerializeField]bool jumpAvailable;
-    //public float jumpCooldown;
+    public float jumpCooldown;
     public float jumpForce;
     public ForceMode2D jumpingForceMode;
     private Coroutine jumpCooldownCoroutine;
@@ -52,7 +52,7 @@ public class CharacterController : MonoBehaviour
             jumpAvailable = true;
             animator.SetBool("isJumping", false);
             isJumping=false;
-            //StopCoroutine(jumpCooldownCoroutine);
+            StopCoroutine(jumpCooldownCoroutine);
         }
         if (collision.gameObject.tag == "Plataform/Mobile")
         {
@@ -89,28 +89,28 @@ public class CharacterController : MonoBehaviour
         {
             jumpAvailable = false;
             characterRigidbody.AddForce(jumpForce * Vector2.up, jumpingForceMode);
-            //jumpCooldownCoroutine = StartCoroutine(JumpCooldownCoroutine());
+            jumpCooldownCoroutine = StartCoroutine(JumpCooldownCoroutine());
             animator.SetBool("isJumping", true);
             isJumping = true;
         }
             
 
     }
-    //IEnumerator JumpCooldownCoroutine()
-    //{
-    //    jumpAvailable = false;
-    //    if (GameManager.gameManagerInstance.wantPlayerDebug)
-    //    {
-    //        Debug.Log("Jump Cooldown Started");
-    //    }
-    //    yield return new WaitForSeconds(jumpCooldown);
-    //    if (GameManager.gameManagerInstance.wantPlayerDebug)
-    //    {
-    //        Debug.Log("Jump Cooldown Finished");
-    //    }
-    //    jumpAvailable = true;
+    IEnumerator JumpCooldownCoroutine()
+    {
+        jumpAvailable = false;
+        if (GameManager.gameManagerInstance.wantPlayerDebug)
+        {
+            Debug.Log("Jump Cooldown Started");
+        }
+        yield return new WaitForSeconds(jumpCooldown);
+        if (GameManager.gameManagerInstance.wantPlayerDebug)
+        {
+            Debug.Log("Jump Cooldown Finished");
+        }
+        jumpAvailable = true;
 
-    //}
+    }
     private static Vector3 truncate(Vector3 vector, float maxValue)
     {
         //Condicional Sentinela
